@@ -1,0 +1,6 @@
+import 'package:flutter/material.dart';
+import 'week2.dart'; // 👈 Import your Week 1 program
+
+void main() {
+  runApp(Week2App()); // 👈 Run it
+}

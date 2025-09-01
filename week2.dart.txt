@@ -1,0 +1,75 @@
+import 'package:flutter/material.dart';
+
+class Week2App extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Week 2 - Common Widgets',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Week 2 - Common Widgets'),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: ListView(
+            children: [
+              Text(
+                'This is a Text widget',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 10),
+
+              Image.network(
+                'https://fthmb.tqn.com/LCyupmFhZf0tXxj6TpBwWS6ZSfo=/3867x2578/filters:fill(auto,1)/GettyImages-153342142-56a75f045f9b58b7d0e9bee6.jpg',
+                height: 150,
+              ),
+              SizedBox(height: 10),
+
+              TextField(
+                decoration: InputDecoration(
+                  labelText: 'Enter your name',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              SizedBox(height: 10),
+
+              ElevatedButton(
+                onPressed: () {
+                  // Dummy action
+                },
+                child: Text('Click Me'),
+              ),
+              SizedBox(height: 10),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Icon(Icons.thumb_up, color: Colors.blue),
+                  Icon(Icons.thumb_down, color: Colors.red),
+                ],
+              ),
+              SizedBox(height: 10),
+
+              Container(
+                padding: EdgeInsets.all(16),
+                color: Colors.amber,
+                child: Text('This is inside a Container'),
+              ),
+              SizedBox(height: 10),
+
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('A Column with:'),
+                  Text('- Multiple'),
+                  Text('- Text'),
+                  Text('- Widgets'),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
